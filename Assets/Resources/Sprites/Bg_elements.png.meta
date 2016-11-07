@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: c1d9184447a6b7a499fefae6923f5649
-timeCreated: 1478482976
+timeCreated: 1478530709
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Bg_cascade
     21300002: Bg_quad
+    21300004: Bg_elements_0
+    21300006: Bg_elements_1
+    21300008: Bg_elements_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,7 +58,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bg_cascade
+      name: Bg_elements_0
       rect:
         serializedVersion: 2
         x: 29
@@ -68,13 +71,26 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Bg_quad
+      name: Bg_elements_1
       rect:
         serializedVersion: 2
         x: 284
         y: 232
         width: 965
         height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bg_elements_2
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 105
+        width: 965
+        height: 109
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
