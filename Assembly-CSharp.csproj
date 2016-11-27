@@ -45,9 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ArrowEffectCS.cs" />
      <Compile Include="Assets\Scripts\BeatBondCS.cs" />
      <Compile Include="Assets\Scripts\FadeInPartCS.cs" />
      <Compile Include="Assets\Scripts\InputFeedbackCS.cs" />
+     <Compile Include="Assets\Scripts\InstructionCS.cs" />
+     <Compile Include="Assets\Scripts\MoleculeDataBase.cs" />
+     <Compile Include="Assets\Scripts\MoleculeDataCS.cs" />
+     <Compile Include="Assets\Scripts\MoleculeFitterCS.cs" />
+     <None Include="Assets\Scripts\molecules.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

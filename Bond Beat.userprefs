@@ -1,8 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InputFeedbackCS.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MoleculeDataCS.cs">
     <Files>
-      <File FileName="Assets\Scripts\InputFeedbackCS.cs" Line="119" Column="17" />
+      <File FileName="Assets\Scripts\InputFeedbackCS.cs" Line="71" Column="68" />
+      <File FileName="Assets\Scripts\FadeInPartCS.cs" Line="46" Column="10" />
+      <File FileName="Assets\Scripts\ArrowEffectCS.cs" Line="51" Column="13" />
+      <File FileName="Assets\Scripts\MoleculeDataBase.cs" Line="34" Column="38" />
+      <File FileName="Assets\Scripts\InstructionCS.cs" Line="16" Column="25" />
+      <File FileName="Assets\Scripts\MoleculeDataCS.cs" Line="16" Column="36" />
+      <File FileName="Assets\Scripts\molecules.xml" Line="33" Column="17" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

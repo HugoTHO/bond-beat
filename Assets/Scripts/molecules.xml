@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Database>
+	<Molecule>
+		<Name>Metano</Name>
+		<Difficulty>0</Difficulty>
+		<Instructions>
+			<Instr>
+				<int>5</int>
+				<int>0</int>
+				<int>1</int>
+				<int>-1</int>
+			</Instr>
+		</Instructions>
+		<Prefab>Methane</Prefab>
+	</Molecule>
+	<Molecule>
+		<Name>Eteno</Name>
+		<Difficulty>0</Difficulty>
+		<Instructions>
+			<Instr>
+				<int>4</int>
+				<int>0</int>
+				<int>1</int>
+				<int>-1</int>
+			</Instr>
+			<Instr>
+				<int>8</int>
+				<int>0</int>
+				<int>2</int>
+				<int>-1</int>
+			</Instr>
+		</Instructions>
+		<Prefab>Ethene</Prefab>
+	</Molecule>
+</Database>
