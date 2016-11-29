@@ -36,14 +36,6 @@ public class InputFeedbackCS : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(KeyCode.W)) {
-			NextStage();
-		}
-
-		if (Input.GetKeyDown(KeyCode.R)) {
-			ResetState();
-		}
-
 		if (!blocked) {
 
 			if ((!delaying || Time.time - delayStart < 0.025) && Input.GetKeyDown(pressKey1)) {
@@ -153,6 +145,8 @@ public class InputFeedbackCS : MonoBehaviour {
 
 		for (int i = 0; i < childs.Length; i++)
 			childs [i].SetActive (false);
+
+		transform.parent.GetChild(0).gameObject.SetActive (false);
 
 		stage = Stage.First;
 		blocked = false;

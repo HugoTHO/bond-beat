@@ -5,7 +5,10 @@ public class BeatBondCS : MonoBehaviour {
 
 	public enum Stage { first, second, third, fourth };
 
-	public int BPM;
+	public float NextBeat { set {this.nextBeat = value; } }
+	public MoleculeFitterCS Fitter { set {this.fitter = value; } }
+
+	public int bondCode, BPM;
 	public float beatDistance = 1.43f;
 	public GameObject[] prefabs;
 	public int[] posCode;
@@ -17,6 +20,7 @@ public class BeatBondCS : MonoBehaviour {
 	private Stage stage;
 	private GameObject[] objRefs;
 	private Vector3 posA, posB;
+	private MoleculeFitterCS fitter;
 	private InputFeedbackCS inputs;
 
 	// Use this for initialization
@@ -24,7 +28,6 @@ public class BeatBondCS : MonoBehaviour {
 
 		beatTime = 60.0f / BPM;
 		velocity = beatDistance / beatTime;
-		nextBeat = Time.time + beatTime;
 
 		posA = spawnPointA.transform.position;
 		posB = spawnPointB.transform.position;
@@ -130,6 +133,7 @@ public class BeatBondCS : MonoBehaviour {
 	private void Match () {
 		inputs.Block ();
 		matched = true;
+		fitter.NextPart (bondCode, this);
 	}
 
 	private GameObject NewBeatLine (GameObject prefab, int posCode) {
