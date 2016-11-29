@@ -5,13 +5,14 @@ public class BeatBondCS : MonoBehaviour {
 
 	public enum Stage { first, second, third, fourth };
 
-	public float beatTime, beatDistance = 1.42f;
+	public int BPM;
+	public float beatDistance = 1.43f;
 	public GameObject[] prefabs;
 	public int[] posCode;
 	public Transform spawnPointA, spawnPointB;
 
 	private int[] objBeats;
-	private float velocity, nextBeat;
+	private float beatTime, velocity, nextBeat;
 	private bool matched;
 	private Stage stage;
 	private GameObject[] objRefs;
@@ -21,6 +22,7 @@ public class BeatBondCS : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		beatTime = 60.0f / BPM;
 		velocity = beatDistance / beatTime;
 		nextBeat = Time.time + beatTime;
 
@@ -71,16 +73,15 @@ public class BeatBondCS : MonoBehaviour {
 			if (objRefs [(int)stage] != null) {
 				float targetPosY = objRefs [(int)stage].transform.localPosition.y;
 
-				if (targetPosY <= -10.44f + (int)stage * 1.42f && stage != Stage.first) {
+				if (targetPosY <= -11.15f + (int)stage * 1.42f && stage != Stage.first) {
 					ResetState ();
 				} else {
-
+					
 					if (inputs.InputCode > 0)
-					if (targetPosY >= -10.44f + (int)stage * 1.42f && targetPosY <= -9.44f + (int)stage * 1.42f &&
-					   inputs.InputCode == posCode [(int)stage]) {
-						NextStage ();
-					}
-
+						if (targetPosY >= -11.15f + (int)stage * 1.42f && targetPosY <= -10.15f + (int)stage * 1.42f &&
+						   inputs.InputCode == posCode [(int)stage]) {
+							NextStage ();
+						}
 				}
 			}
 		}
@@ -91,7 +92,7 @@ public class BeatBondCS : MonoBehaviour {
 		Rigidbody2D rbAux = objRefs[(int)stage].GetComponent<Rigidbody2D> ();
 		rbAux.velocity = Vector2.zero;
 		Vector3 auxVec = objRefs [(int)stage].transform.localPosition;
-		auxVec.y = -9.94f + (int)stage * 1.42f;
+		auxVec.y = -10.65f + (int)stage * 1.42f;
 		objRefs [(int)stage].transform.localPosition = auxVec;
 
 		inputs.NextStage ();
