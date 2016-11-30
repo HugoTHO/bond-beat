@@ -110,49 +110,49 @@
 		<Name>2-metil-propano</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>2</int> 
 				<int>3</int>
 				<int>1</int>
 				<int>2</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr> 
 				<int>1</int>
 				<int>5</int>
 				<int>3</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>9</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>6</int>
 				<int>7</int>
 			</Instr>
-			<Instr> <!--6-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>9</int>
 			</Instr>
-			<Instr> <!--7-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>8</int>
@@ -165,43 +165,43 @@
 		<Name>2,4-dimetil-pentano</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>4</int> 
 				<int>5</int>
 				<int>2</int>
 				<int>1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>1</int>
 				<int>4</int>
 				<int>-1</int>
 				<int>3</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>1</int>
 				<int>3</int>
 				<int>-1</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>1</int>
 				<int>3</int>
 				<int>-1</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>6</int>
 			</Instr>
-			<Instr> <!--6-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
@@ -214,43 +214,43 @@
 		<Name>3-metilpent-1-ino</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>1</int> 
 				<int>0</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>3</int>
 				<int>5</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>5</int>
 				<int>4</int>
 				<int>3</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>1</int>
 				<int>4</int>
 				<int>-1</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>5</int>
 				<int>1</int>
 				<int>6</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>7</int>
 			</Instr>
-			<Instr> <!--6-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
@@ -263,37 +263,37 @@
 		<Name>4-etil-hexa-1,3-dieno</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>3</int> 
 				<int>5</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>6</int>
 				<int>8</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>3</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>4</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
@@ -306,43 +306,43 @@
 		<Name>pent-2-eno</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>3</int> 
 				<int>4</int>
 				<int>1</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>5</int>
 				<int>7</int>
 				<int>-1</int>
 				<int>2</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>3</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>7</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>5</int>
 				<int>3</int>
 				<int>-1</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>7</int>
 				<int>8</int>
 				<int>6</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--6-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
@@ -355,37 +355,37 @@
 		<Name>hexa-1,3,5-trieno</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>5</int> 
 				<int>3</int>
 				<int>-1</int>
 				<int>1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>7</int>
 				<int>8</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>5</int>
 				<int>3</int>
 				<int>-1</int>
 				<int>3</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>7</int>
 				<int>5</int>
 				<int>4</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>3</int>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>8</int>
 				<int>5</int>
 				<int>6</int>
@@ -398,43 +398,43 @@
 		<Name>4-metil-pent-2-eno</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>3</int> 
 				<int>7</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>3</int>
 				<int>5</int>
 				<int>4</int>
 				<int>2</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>1</int>
 				<int>3</int>
 				<int>-1</int>
 				<int>3</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>7</int>
 				<int>8</int>
 				<int>6</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>7</int>
 				<int>8</int>
 				<int>6</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--6-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
@@ -447,49 +447,49 @@
 		<Name>3-etil-4-metil-pent-1-ino</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>3</int> 
 				<int>5</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>3</int>
 				<int>4</int>
 				<int>2</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>5</int>
 				<int>4</int>
 				<int>-1</int>
 				<int>3</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>6</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>3</int>
 				<int>5</int>
 				<int>5</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>6</int>
 			</Instr>
-			<Instr> <!--6-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>7</int>
 			</Instr>
-			<Instr> <!--7-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
@@ -502,25 +502,25 @@
 		<Name>but-2-eno</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>4</int> 
 				<int>5</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>3</int>
 				<int>4</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>5</int>
 				<int>7</int>
 				<int>-1</int>
 				<int>3</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>5</int>
 				<int>1</int>
 				<int>4</int>
@@ -533,31 +533,31 @@
 		<Name>3-etil-2,5-dimetil-hexano</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>5</int> 
 				<int>1</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>5</int>
 				<int>1</int>
 				<int>3</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>5</int>
 				<int>4</int>
 				<int>6</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>5</int>
@@ -570,37 +570,37 @@
 		<Name>hexano</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>4</int> 
 				<int>5</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>4</int>
 				<int>1</int>
 				<int>3</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>4</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>5</int>
 				<int>7</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>6</int>
@@ -613,37 +613,37 @@
 		<Name>2-metil-propeno</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>2</int> 
 				<int>3</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>5</int>
 				<int>7</int>
 				<int>2</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>7</int>
 				<int>5</int>
 				<int>3</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>6</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>5</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>6</int>
@@ -656,43 +656,43 @@
 		<Name>heptano</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>4</int> 
 				<int>5</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>4</int>
 				<int>1</int>
 				<int>3</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>4</int>
 				<int>1</int>
 				<int>4</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>5</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>6</int>
 				<int>8</int>
 			</Instr>
-			<Instr> <!--6-->
+			<Instr>
 				<int>1</int>
 				<int>4</int>
 				<int>7</int>
@@ -705,37 +705,37 @@
 		<Name>2-etil-pent-1-eno</Name>
 		<Difficulty>1</Difficulty>
 		<Instructions>
-			<Instr> <!--0-->
+			<Instr>
 				<int>6</int> 
 				<int>8</int>
 				<int>1</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--1-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>2</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--2-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>3</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--3-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>-1</int>
 				<int>4</int>
 			</Instr>
-			<Instr> <!--4-->
+			<Instr>
 				<int>4</int>
 				<int>5</int>
 				<int>5</int>
 				<int>-1</int>
 			</Instr>
-			<Instr> <!--5-->
+			<Instr>
 				<int>1</int>
 				<int>5</int>
 				<int>-1</int>

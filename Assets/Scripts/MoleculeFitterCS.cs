@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -8,18 +9,30 @@ public class MoleculeFitterCS : MonoBehaviour {
 	public GameObject StreamBRef { get { return this.strBRef; } }
 
 	public GameMasterCS master;
+	public Text moleculeName;
 	public Transform moleculeSpawn, streamA, streamB;
 	public RectTransform signA, signB;
 	public InputFeedbackCS squaresA, squaresB;
 	public GameObject[] beatBonds, beatSigns;
 
+	private bool delaying;
 	private int current;
+	private float interMolecDelay;
 	private MoleculeDataCS molecule;
 	private GameObject moleculeRef, strARef, strBRef, sigARef, sigBRef;
 	private List<GameObject> moleculeParts, arrows;
 
 	void Start () {
-		
+		delaying = false;
+	}
+
+	void Update () {
+		if (delaying) {
+			if (Time.time >= interMolecDelay) {
+				moleculeName.text = "";
+				delaying = false;
+			}
+		}
 	}
 
 	public void NewMolecule (MoleculeDataCS molecule) {
@@ -42,13 +55,11 @@ public class MoleculeFitterCS : MonoBehaviour {
 		foreach (Transform aAux in moleculeRef.transform.GetChild(1))
 			arrows.Add (aAux.gameObject);
 
+		moleculeName.text = molecule.Name;
 
-
-		if (molecule.Instructions [0].OptA > 0 && molecule.Instructions [0].OptB > 0) {
+		if (molecule.Instructions [0].OptB > 0) {
 
 			int rand = Random.Range (0, 2);
-
-			Debug.Log (rand);
 
 			strARef = (GameObject)GameObject.Instantiate (beatBonds [molecule.Instructions [0].OptA - 1], rand == 0 ? streamA : streamB, false);
 			BeatBondCS auxRefA = strARef.GetComponent<BeatBondCS> ();
@@ -101,11 +112,9 @@ public class MoleculeFitterCS : MonoBehaviour {
 
 				arrows [current].SetActive (true);
 
-				if (molecule.Instructions [current].OptA > 0 && molecule.Instructions [current].OptB > 0) {
+				if (molecule.Instructions [current].OptB > 0) {
 
 					int rand = Random.Range (0, 2);
-
-					Debug.Log (rand);
 
 					strARef = (GameObject)GameObject.Instantiate (beatBonds [molecule.Instructions [current].OptA - 1], rand == 0 ? streamA : streamB, false);
 					BeatBondCS auxRefA = strARef.GetComponent<BeatBondCS> ();
@@ -127,9 +136,22 @@ public class MoleculeFitterCS : MonoBehaviour {
 					auxRef.Fitter = this;
 					sigARef = (GameObject)GameObject.Instantiate (beatSigns [molecule.Instructions [current].OptA - 1], signA, false);
 
-					squaresB.Block();
+					squaresB.Block ();
 				}
+			} else {
+
+				float tAux = master.NextBeat - Time.time + master.BeatTime * 3;
+
+				GameObject.Destroy (moleculeRef, tAux);
+
+				interMolecDelay = Time.time + tAux;
+
+				delaying = true;
+
+				master.NewMolecule ();
 			}
+
+
 		} else {
 			
 			if (squaresA.transform == beatBond.transform.parent.parent.GetChild (4)) {

@@ -29,9 +29,9 @@ public class BGFadeBeatCS : MonoBehaviour {
 		Color tmp = sprite.color;
 
 		if (t < 0.5f) {
-			tmp.a = t;
+			tmp.a = t * 2 ;
 		} else {
-			tmp.a = (1 - t);
+			tmp.a = (1 - t) * 2;
 		}
 
 		sprite.color = tmp;
