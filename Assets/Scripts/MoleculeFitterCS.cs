@@ -10,21 +10,19 @@ public class MoleculeFitterCS : MonoBehaviour {
 
 	public GameMasterCS master;
 	public Text moleculeName;
+	public ScoreCS score;
 	public Transform moleculeSpawn, streamA, streamB;
 	public RectTransform signA, signB;
 	public InputFeedbackCS squaresA, squaresB;
 	public GameObject[] beatBonds, beatSigns;
+	public GameObject[] help;
 
-	private bool delaying;
-	private int current;
+	private bool delaying = false, tutorial = false, tutorialCheck = true;
+	private int current, tutorialIndex = 0;
 	private float interMolecDelay;
 	private MoleculeDataCS molecule;
 	private GameObject moleculeRef, strARef, strBRef, sigARef, sigBRef;
 	private List<GameObject> moleculeParts, arrows;
-
-	void Start () {
-		delaying = false;
-	}
 
 	void Update () {
 		if (delaying) {
@@ -38,6 +36,14 @@ public class MoleculeFitterCS : MonoBehaviour {
 	public void NewMolecule (MoleculeDataCS molecule) {
 
 		this.molecule = molecule;
+
+		if (tutorialCheck) {
+			if (this.molecule.Name == "metano") {
+				tutorial = true;
+			}
+			tutorialCheck = false;
+		}
+
 		current = 0;
 		StartFit ();
 	}
@@ -56,6 +62,16 @@ public class MoleculeFitterCS : MonoBehaviour {
 			arrows.Add (aAux.gameObject);
 
 		moleculeName.text = molecule.Name;
+
+		if (tutorial) {
+			if (tutorialIndex > 0)
+				help [tutorialIndex - 1].SetActive (false);
+			if (tutorialIndex == 3) {
+				tutorial = false;
+			} else {
+				help [tutorialIndex++].SetActive (true);
+			}
+		}
 
 		if (molecule.Instructions [0].OptB > 0) {
 
@@ -89,10 +105,17 @@ public class MoleculeFitterCS : MonoBehaviour {
 
 		if (molecule.Instructions [current].getAnswer (answer) != -1) {
 
-			if (beatBond.gameObject == strARef)
-				GameObject.DestroyImmediate (strBRef);
-			else
-				GameObject.DestroyImmediate (strARef);
+			if (beatBond.gameObject == strARef) {
+				if (strBRef != null) {
+					strBRef.GetComponent<BeatBondCS> ().ResetBGColor ();
+					GameObject.DestroyImmediate (strBRef);
+				}
+			} else {
+				if (strARef != null) {
+					strARef.GetComponent<BeatBondCS> ().ResetBGColor ();
+					GameObject.DestroyImmediate (strARef);
+				}
+			}
 
 			GameObject.Destroy (beatBond.gameObject, master.NextBeat - Time.time);
 
@@ -108,9 +131,19 @@ public class MoleculeFitterCS : MonoBehaviour {
 
 			moleculeParts [current].SetActive (true);
 
+			if (tutorial) {
+				help [tutorialIndex - 1].SetActive (false);
+			}
+
 			if (current < molecule.Instructions.Count) {
 
 				arrows [current].SetActive (true);
+
+				score.IncreaseScore (100);
+
+				if (tutorial) {
+					help [tutorialIndex++].SetActive (true);
+				}
 
 				if (molecule.Instructions [current].OptB > 0) {
 
@@ -148,6 +181,8 @@ public class MoleculeFitterCS : MonoBehaviour {
 
 				delaying = true;
 
+				score.IncreaseScore (500);
+
 				master.NewMolecule ();
 			}
 
@@ -162,6 +197,8 @@ public class MoleculeFitterCS : MonoBehaviour {
 				squaresB.Block ();
 			}
 			beatBond.transform.parent.parent.GetChild (0).gameObject.SetActive (true);
+
+			score.DecreaseScore (100);
 
 			GameObject.Destroy (beatBond.gameObject, master.NextBeat - Time.time);
 		}

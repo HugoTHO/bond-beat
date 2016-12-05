@@ -16,12 +16,13 @@ public class BeatBondCS : MonoBehaviour {
 
 	private int[] objBeats;
 	private float beatTime, velocity, nextBeat;
-	private bool matched;
+	private bool matched, colorMark;
 	private Stage stage;
 	private GameObject[] objRefs;
 	private Vector3 posA, posB;
 	private MoleculeFitterCS fitter;
 	private InputFeedbackCS inputs;
+	private BGFadeBeatCS beatfeedback;
 
 	// Use this for initialization
 	void Start () {
@@ -34,13 +35,18 @@ public class BeatBondCS : MonoBehaviour {
 
 		stage = Stage.first;
 		matched = false;
+		colorMark = false;
 
 		objRefs = new GameObject[prefabs.Length];
 		objBeats = new int[prefabs.Length];
-
-		foreach (Transform child in transform.parent.parent)
+	
+		foreach (Transform child in transform.parent.parent) {
 			if (child.CompareTag ("Input"))
 				inputs = child.GetComponent<InputFeedbackCS> ();
+			if (child.CompareTag ("BackGround")) {
+				beatfeedback = child.GetComponent<BGFadeBeatCS> ();
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -76,18 +82,30 @@ public class BeatBondCS : MonoBehaviour {
 			if (objRefs [(int)stage] != null) {
 				float targetPosY = objRefs [(int)stage].transform.localPosition.y;
 
-				if (targetPosY <= -11.15f + (int)stage * 1.42f && stage != Stage.first) {
-					ResetState ();
+				if (targetPosY <= -11.15f + (int)stage * 1.42f) {
+					if (!colorMark) {
+						beatfeedback.ResetColor ();
+						beatfeedback.intence = 1;
+					}
+					if( stage != Stage.first)
+						ResetState ();
 				} else {
-					
-					if (inputs.InputCode > 0)
-						if (targetPosY >= -11.15f + (int)stage * 1.42f && targetPosY <= -10.15f + (int)stage * 1.42f &&
-						   inputs.InputCode == posCode [(int)stage]) {
-							NextStage ();
+					if (targetPosY >= -11.15f + (int)stage * 1.42f && targetPosY <= -10.15f + (int)stage * 1.42f) {
+						if (!colorMark) {
+							beatfeedback.ModifyColor ();
+							beatfeedback.intence = 2;
 						}
+						if (inputs.InputCode == posCode [(int)stage])
+							NextStage ();
+					}
 				}
 			}
 		}
+	}
+
+	public void ResetBGColor () {
+		beatfeedback.ResetColor ();
+		beatfeedback.intence = 1;
 	}
 
 	private void NextStage () {
@@ -134,6 +152,8 @@ public class BeatBondCS : MonoBehaviour {
 		inputs.Block ();
 		matched = true;
 		fitter.NextPart (bondCode, this);
+		beatfeedback.ResetColor ();
+		beatfeedback.intence = 1;
 	}
 
 	private GameObject NewBeatLine (GameObject prefab, int posCode) {

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameMasterCS : MonoBehaviour {
@@ -11,6 +12,8 @@ public class GameMasterCS : MonoBehaviour {
 
 	public int BPM;
 	public MoleculeFitterCS fitter;
+	public Text help1, help2, help3;
+	public AudioSource music;
 
 	private bool counting;
 	private int tutIndex, moleculeDelay;
@@ -33,6 +36,7 @@ public class GameMasterCS : MonoBehaviour {
 		} else {
 			tutIndex = 0;
 			fitter.NewMolecule (dataBase.tutorialMolecules[0]);
+			help1.gameObject.SetActive (true);
 		}
 
 		counting = false;
@@ -40,6 +44,7 @@ public class GameMasterCS : MonoBehaviour {
 	}
 	
 	void Update () {
+
 		if (Time.time >= nextBeat) {
 			nextBeat += beatTime;
 			if (counting) {
@@ -69,8 +74,20 @@ public class GameMasterCS : MonoBehaviour {
 				} else {
 					tutIndex++;
 					if (tutIndex < 3) {
+						switch (tutIndex) {
+						case 1:
+							help2.gameObject.SetActive (true);
+							break;
+						case 2:
+							help3.gameObject.SetActive (true);
+							break;
+						default:
+							Debug.Log ("Bug no Tutorial");
+							break;
+						}
 						fitter.NewMolecule (dataBase.tutorialMolecules [tutIndex]);
 					} else {
+
 						mode = Mode.Free;
 
 						int rand = Random.Range (0, dataBase.molecules.Count);
@@ -81,7 +98,24 @@ public class GameMasterCS : MonoBehaviour {
 						fitter.NewMolecule (molecule);
 					}
 				}
+			} else if (mode == Mode.Tutorial && moleculeDelay == 4) {
+				if (help1.gameObject.activeSelf)
+					help1.gameObject.SetActive (false);
+				if (help2.gameObject.activeSelf)
+					help2.gameObject.SetActive (false);
+				if (help3.gameObject.activeSelf)
+					help3.gameObject.SetActive (false);
 			}
 		}
+	}
+
+	public void PausarJogo() {
+		music.Pause();
+		Time.timeScale = 0;
+	}
+
+	public void DespausarJogo () {
+		music.UnPause();
+		Time.timeScale = 1;
 	}
 }
