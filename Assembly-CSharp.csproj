@@ -48,6 +48,8 @@
      <Compile Include="Assets\Scripts\ArrowEffectCS.cs" />
      <Compile Include="Assets\Scripts\BGFadeBeatCS.cs" />
      <Compile Include="Assets\Scripts\BeatBondCS.cs" />
+     <Compile Include="Assets\Scripts\ChangeSceneCS.cs" />
+     <Compile Include="Assets\Scripts\DontDestroyCS.cs" />
      <Compile Include="Assets\Scripts\FadeInPartCS.cs" />
      <Compile Include="Assets\Scripts\GameMasterCS.cs" />
      <Compile Include="Assets\Scripts\InputFeedbackCS.cs" />
@@ -56,9 +58,10 @@
      <Compile Include="Assets\Scripts\MoleculeDataBaseCS.cs" />
      <Compile Include="Assets\Scripts\MoleculeDataCS.cs" />
      <Compile Include="Assets\Scripts\MoleculeFitterCS.cs" />
-     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\ScoreCS.cs" />
      <Compile Include="Assets\Scripts\TimerCS.cs" />
+     <Compile Include="Assets\Scripts\TittleRotateCS.cs" />
+     <Compile Include="Assets\Scripts\UpdateScoreCS.cs" />
      <None Include="Assets\Scripts\molecules.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

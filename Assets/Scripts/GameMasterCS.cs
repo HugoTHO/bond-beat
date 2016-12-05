@@ -10,10 +10,12 @@ public class GameMasterCS : MonoBehaviour {
 	public float NextBeat { get { return this.nextBeat; } }
 	public float BeatTime { get { return this.beatTime; } }
 
-	public int BPM;
+	public int BPM, maxTime;
 	public MoleculeFitterCS fitter;
 	public Text help1, help2, help3;
 	public AudioSource music;
+	public InputFeedbackCS input1, input2;
+	public GameObject finishScreen;
 
 	private bool counting;
 	private int tutIndex, moleculeDelay;
@@ -51,6 +53,10 @@ public class GameMasterCS : MonoBehaviour {
 				moleculeDelay++;
 				NewMolecule ();
 			}
+		}
+
+		if ((int)Time.time == maxTime) {
+			FinishGame ();
 		}
 	}
 
@@ -112,10 +118,20 @@ public class GameMasterCS : MonoBehaviour {
 	public void PausarJogo() {
 		music.Pause();
 		Time.timeScale = 0;
+		input1.paused = true;
+		input2.paused = true;
 	}
 
 	public void DespausarJogo () {
 		music.UnPause();
 		Time.timeScale = 1;
+		input1.paused = false;
+		input2.paused = false;
+	}
+
+	private void FinishGame () {
+		input1.paused = true;
+		input2.paused = true;
+		finishScreen.SetActive (true);
 	}
 }

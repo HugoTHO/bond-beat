@@ -1,11 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MoleculeFitterCS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DontDestroyCS.cs">
     <Files>
-      <File FileName="Assets\Scripts\MoleculeFitterCS.cs" Line="42" Column="21" />
-      <File FileName="Assets\Scripts\InputFeedbackCS.cs" Line="41" Column="84" />
-      <File FileName="Assets\Scripts\GameMasterCS.cs" Line="113" Column="16" />
-      <File FileName="Assets\Scripts\KeyButtonCS.cs" Line="2" Column="22" />
+      <File FileName="Assets\Scripts\MoleculeFitterCS.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InputFeedbackCS.cs" Line="53" Column="19" />
+      <File FileName="Assets\Scripts\GameMasterCS.cs" Line="135" Column="33" />
+      <File FileName="Assets\Scripts\KeyButtonCS.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TittleRotateCS.cs" Line="19" Column="51" />
+      <File FileName="Assets\Scripts\ScoreCS.cs" Line="17" Column="20" />
+      <File FileName="Assets\Scripts\UpdateScoreCS.cs" Line="18" Column="65" />
+      <File FileName="Assets\Scripts\TimerCS.cs" Line="35" Column="17" />
+      <File FileName="Assets\Scripts\DontDestroyCS.cs" Line="8" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

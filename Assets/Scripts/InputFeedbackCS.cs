@@ -5,6 +5,7 @@ public class InputFeedbackCS : MonoBehaviour {
 
 	public enum Stage { First, Second, Third, Fourth };
 
+	public bool paused;
 	public KeyCode pressKey1, pressKey2;
 	public float pressDelay;
 	public int InputCode { get { return inputCode; } }
@@ -28,6 +29,7 @@ public class InputFeedbackCS : MonoBehaviour {
 		}
 
 		stage = Stage.First;
+		paused = false;
 		delaying = false;
 		blocked = false;
 		inputCode = 0;
@@ -38,7 +40,7 @@ public class InputFeedbackCS : MonoBehaviour {
 
 		if (!blocked) {
 
-			if ((!delaying || Time.time - delayStart < 0.025) && Input.GetKeyDown(pressKey1)) {
+			if (!paused && (!delaying || Time.time - delayStart < 0.025) && Input.GetKeyDown(pressKey1)) {
 
 				childs[(int)stage * 2].SetActive (true);
 
@@ -48,7 +50,7 @@ public class InputFeedbackCS : MonoBehaviour {
 				}
 			}
 
-			if ((!delaying || Time.time - delayStart < 0.025) && Input.GetKeyDown(pressKey2)) {
+			if (!paused && (!delaying || Time.time - delayStart < 0.025) && Input.GetKeyDown(pressKey2)) {
 
 				childs[(int)stage * 2 + 1].SetActive (true);
 
